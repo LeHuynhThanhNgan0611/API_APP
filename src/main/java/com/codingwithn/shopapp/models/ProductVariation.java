@@ -12,27 +12,19 @@ public class ProductVariation {
     private int stock;
     private Map<String, String> attributeValues;
 
-    public ProductVariation(Long id, String sku, String image, String description, double price, double salePrice, int stock, Map<String, String> attributeValues) {
+    public ProductVariation(Long id, int stock, double price, Double salePrice, String image, String description, Map<String, String> attributeValues) {
         this.id = id;
-        this.sku = sku;
+        this.stock = stock;
+        this.price = price;
+        this.salePrice = salePrice != null ? salePrice : 0.0;
         this.image = image;
         this.description = description;
-        this.price = price;
-        this.salePrice = salePrice;
-        this.stock = stock;
         this.attributeValues = attributeValues;
     }
 
     // Constructor mặc định (cần cho Spring Boot khi sử dụng các model trong controller)
     public ProductVariation() {
-        this.id = 0L;
-        this.sku = "";
-        this.image = "";
-        this.description = "";
-        this.price = 0.0;
-        this.salePrice = 0.0;
-        this.stock = 0;
-        this.attributeValues = null;
+        // Constructor mặc định
     }
 
     // Getter và setter cho các thuộc tính
