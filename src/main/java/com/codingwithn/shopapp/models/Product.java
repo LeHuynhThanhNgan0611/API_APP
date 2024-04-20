@@ -19,7 +19,7 @@ public class Product {
     private List<ProductAttribute> productAttributes;
     private List<ProductVariation> productVariations;
 
-    public Product(Long id, int stock, String sku, double price, String title, String thumbnail, double salePrice, boolean isFeatured, Brand brand, String description, Long categoryId, List<String> images, String productType, List<ProductAttribute> productAttributes, List<ProductVariation> productVariations) {
+    public Product(Long id, int stock, String sku, double price, String title, String thumbnail, Double salePrice, boolean isFeatured, Brand brand, String description, Long categoryId, List<String> images, String productType, List<ProductAttribute> productAttributes, List<ProductVariation> productVariations) {
         this.id = id;
         this.stock = stock;
         this.sku = sku;
