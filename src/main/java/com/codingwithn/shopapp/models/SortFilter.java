@@ -1,24 +1,24 @@
 package com.codingwithn.shopapp.models;
 
 public class SortFilter {
-    private Long id;
+    private String id;
     private String name;
 
     public SortFilter() {
         // Constructor mặc định (cần cho Spring Boot khi sử dụng các model trong controller)
     }
 
-    public SortFilter(Long id, String name) {
+    public SortFilter(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
     // Getter và setter cho các thuộc tính
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

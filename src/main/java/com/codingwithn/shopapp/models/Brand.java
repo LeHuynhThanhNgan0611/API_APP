@@ -1,7 +1,7 @@
 package com.codingwithn.shopapp.models;
 
 public class Brand {
-    private Long id;
+    private String id;
     private String image;
     private String name;
     private int productsCount;
@@ -11,7 +11,7 @@ public class Brand {
         // Constructor mặc định (cần cho Spring Boot khi sử dụng các model trong controller)
     }
 
-    public Brand(Long id, String image, String name, int productsCount, boolean featured) {
+    public Brand(String id, String image, String name, int productsCount, boolean featured) {
         this.id = id;
         this.image = image;
         this.name = name;
@@ -20,11 +20,11 @@ public class Brand {
     }
 
     // Getter và setter cho các thuộc tính
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

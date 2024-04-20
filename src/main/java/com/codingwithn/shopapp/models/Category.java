@@ -1,17 +1,17 @@
 package com.codingwithn.shopapp.models;
 
 public class Category {
-    private Long id;
+    private String id;
     private String name;
     private String image;
-    private Long parentId;
+    private String parentId;
     private boolean featured;
 
     public Category() {
         // Constructor mặc định (cần cho Spring Boot khi sử dụng các model trong controller)
     }
 
-    public Category(Long id, String name, String image, Long parentId, boolean featured) {
+    public Category(String id, String name, String image, String parentId, boolean featured) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -20,11 +20,11 @@ public class Category {
     }
 
     // Getter và setter cho các thuộc tính
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -44,11 +44,11 @@ public class Category {
         this.image = image;
     }
 
-    public Long getParentId() {
+    public String getParentId() {
         return parentId;
     }
 
-    public void setParentId(Long parentId) {
+    public void setParentId(String parentId) {
         this.parentId = parentId;
     }
 
