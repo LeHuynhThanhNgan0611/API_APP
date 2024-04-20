@@ -3,7 +3,7 @@ package com.codingwithn.shopapp.models;
 import java.util.List;
 
 public class Product {
-    private Long id;
+    private String id;
     private int stock;
     private String sku;
     private double price;
@@ -13,13 +13,13 @@ public class Product {
     private boolean isFeatured;
     private Brand brand;
     private String description;
-    private Long categoryId;
+    private String categoryId;
     private List<String> images;
     private String productType;
     private List<ProductAttribute> productAttributes;
     private List<ProductVariation> productVariations;
 
-    public Product(Long id, int stock, String sku, double price, String title, String thumbnail, Double salePrice, boolean isFeatured, Brand brand, String description, Long categoryId, List<String> images, String productType, List<ProductAttribute> productAttributes, List<ProductVariation> productVariations) {
+    public Product(String id, int stock, String sku, double price, String title, String thumbnail, Double salePrice, boolean isFeatured, Brand brand, String description, String categoryId, List<String> images, String productType, List<ProductAttribute> productAttributes, List<ProductVariation> productVariations) {
         this.id = id;
         this.stock = stock;
         this.sku = sku;
@@ -39,11 +39,11 @@ public class Product {
 
     // Getter và setter cho các thuộc tính
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -119,11 +119,11 @@ public class Product {
         this.description = description;
     }
 
-    public Long getCategoryId() {
+    public String getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(Long categoryId) {
+    public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
     }
 

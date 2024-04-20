@@ -15,12 +15,12 @@ public class SortFilterController {
         List<SortFilter> sortFilters = new ArrayList<>();
 
         // Thêm các đối tượng SortFilter vào danh sách
-        sortFilters.add(new SortFilter(1L, "Name"));
-        sortFilters.add(new SortFilter(2L, "Lowest Price"));
-        sortFilters.add(new SortFilter(3L, "Most Popular"));
-        sortFilters.add(new SortFilter(4L, "Highest Price"));
-        sortFilters.add(new SortFilter(5L, "Newest"));
-        sortFilters.add(new SortFilter(5L, "Most Suitable"));
+        sortFilters.add(new SortFilter("1", "Name"));
+        sortFilters.add(new SortFilter("2", "Lowest Price"));
+        sortFilters.add(new SortFilter("3", "Most Popular"));
+        sortFilters.add(new SortFilter("4", "Highest Price"));
+        sortFilters.add(new SortFilter("5", "Newest"));
+        sortFilters.add(new SortFilter("5", "Most Suitable"));
 
 
         // Trả về danh sách các đối tượng SortFilter

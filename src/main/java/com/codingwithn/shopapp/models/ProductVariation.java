@@ -3,7 +3,7 @@ package com.codingwithn.shopapp.models;
 import java.util.Map;
 
 public class ProductVariation {
-    private Long id;
+    private String id;
     private String sku;
     private String image;
     private String description;
@@ -12,7 +12,7 @@ public class ProductVariation {
     private int stock;
     private Map<String, String> attributeValues;
 
-    public ProductVariation(Long id, int stock, double price, Double salePrice, String image, String description, Map<String, String> attributeValues) {
+    public ProductVariation(String id, int stock, double price, Double salePrice, String image, String description, Map<String, String> attributeValues) {
         this.id = id;
         this.stock = stock;
         this.price = price;
@@ -28,11 +28,11 @@ public class ProductVariation {
     }
 
     // Getter và setter cho các thuộc tính
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
