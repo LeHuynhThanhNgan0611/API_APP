@@ -1,11 +1,12 @@
 package com.codingwithn.shopapp.models;
-
+import java.util.List;
 public class Category {
     private String id;
     private String name;
     private String image;
     private String parentId;
     private boolean featured;
+    private List<Category> children;
 
     public Category() {
         // Constructor mặc định (cần cho Spring Boot khi sử dụng các model trong controller)
@@ -59,5 +60,12 @@ public class Category {
     public void setFeatured(boolean featured) {
         this.featured = featured;
     }
-}
 
+    public List<Category> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Category> children) {
+        this.children = children;
+    }
+}
