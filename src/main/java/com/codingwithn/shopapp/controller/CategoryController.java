@@ -38,10 +38,10 @@ public class CategoryController {
                 case "2":
                     category.setChildren(getEletricSubcategories());
                     break;
-                case "3":
+                case "4":
                     category.setChildren(getFashionSubcategories());
                     break;
-                case "5":
+                case "3":
                     category.setChildren(getFutureSubcategories());
                     break;
                 default:
@@ -69,15 +69,15 @@ public class CategoryController {
 
     private List<Category> getFashionSubcategories() {
         List<Category> fashionSubcategories = new ArrayList<>();
-        fashionSubcategories.add(new Category("17", "Áo thun", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/quanao.png", "3", false));
+        fashionSubcategories.add(new Category("17", "Áo thun", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/quanao.png", "4", false));
         // Thêm danh sách con khác nếu cần
         return fashionSubcategories;
     }
     private List<Category> getFutureSubcategories() {
         List<Category> futureSubcategories = new ArrayList<>();
-        futureSubcategories.add(new Category("12", "Nội thất phòng ngủ", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/noithat.png", "5", false));
-        futureSubcategories.add(new Category("13", "Nội thất nhà bếp", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/noithat.png", "5", false));
-        futureSubcategories.add(new Category("14", "Nội thất văn phòng", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/noithat.png", "5", false));
+        futureSubcategories.add(new Category("12", "Nội thất phòng ngủ", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/noithat.png", "3", false));
+        futureSubcategories.add(new Category("13", "Nội thất nhà bếp", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/noithat.png", "3", false));
+        futureSubcategories.add(new Category("14", "Nội thất văn phòng", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/noithat.png", "3", false));
         // Thêm danh sách con khác nếu cần
         return futureSubcategories;
     }
