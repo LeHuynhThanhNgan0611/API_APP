@@ -1,10 +1,7 @@
 package com.codingwithn.shopapp.controller;
 
-import com.codingwithn.shopapp.models.Brand;
 import com.codingwithn.shopapp.models.BrandCategory;
 import com.codingwithn.shopapp.models.Category;
-import com.codingwithn.shopapp.models.Product;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
