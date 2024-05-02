@@ -20,7 +20,7 @@ public class SortFilterController {
         sortFilters.add(new SortFilter("3", "Phổ biến nhất"));
         sortFilters.add(new SortFilter("4", "Giá cao nhất"));
         sortFilters.add(new SortFilter("5", "Mới nhất"));
-        sortFilters.add(new SortFilter("5", "Phù hợp nhất"));
+        sortFilters.add(new SortFilter("6", "Phù hợp nhất"));
 
 
         // Trả về danh sách các đối tượng SortFilter

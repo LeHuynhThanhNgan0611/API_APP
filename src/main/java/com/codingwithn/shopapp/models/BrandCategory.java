@@ -1,19 +1,29 @@
 package com.codingwithn.shopapp.models;
 
+import java.util.List;
+
 public class BrandCategory {
     private String brandId;
-    private String categoryId;
+    private String brandImage;
+    private String brandName;
+    private int productsCount;
+    private boolean featured;
+    private List<Category> categories;
 
     public BrandCategory() {
-        // Constructor mặc định (cần cho Spring Boot khi sử dụng các model trong controller)
+        // Default constructor
     }
 
-    public BrandCategory(String brandId, String categoryId) {
+    public BrandCategory(String brandId, String brandImage, String brandName, int productsCount, boolean featured, List<Category> categories) {
         this.brandId = brandId;
-        this.categoryId = categoryId;
+        this.brandImage = brandImage;
+        this.brandName = brandName;
+        this.productsCount = productsCount;
+        this.featured = featured;
+        this.categories = categories;
     }
 
-    // Getter và setter cho các thuộc tính
+    // Getters and setters
     public String getBrandId() {
         return brandId;
     }
@@ -22,11 +32,43 @@ public class BrandCategory {
         this.brandId = brandId;
     }
 
-    public String getCategoryId() {
-        return categoryId;
+    public String getBrandImage() {
+        return brandImage;
     }
 
-    public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
+    public void setBrandImage(String brandImage) {
+        this.brandImage = brandImage;
+    }
+
+    public String getBrandName() {
+        return brandName;
+    }
+
+    public void setBrandName(String brandName) {
+        this.brandName = brandName;
+    }
+
+    public int getProductsCount() {
+        return productsCount;
+    }
+
+    public void setProductsCount(int productsCount) {
+        this.productsCount = productsCount;
+    }
+
+    public boolean isFeatured() {
+        return featured;
+    }
+
+    public void setFeatured(boolean featured) {
+        this.featured = featured;
+    }
+
+    public List<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(List<Category> categories) {
+        this.categories = categories;
     }
 }

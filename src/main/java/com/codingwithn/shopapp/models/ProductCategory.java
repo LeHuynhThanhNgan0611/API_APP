@@ -1,24 +1,14 @@
 package com.codingwithn.shopapp.models;
 
+import java.util.List;
+
 public class ProductCategory {
-    private String productId;
     private String categoryId;
+    private List<Product> products;
 
-    public ProductCategory() {
-
-    }
-
-    public ProductCategory(String productId, String categoryId) {
-        this.productId = productId;
+    public ProductCategory(String categoryId, List<Product> productList) {
         this.categoryId = categoryId;
-    }
-
-    public String getProductId() {
-        return productId;
-    }
-
-    public void setProductId(String productId) {
-        this.productId = productId;
+        this.products = productList;
     }
 
     public String getCategoryId() {
@@ -27,5 +17,13 @@ public class ProductCategory {
 
     public void setCategoryId(String categoryId) {
         this.categoryId = categoryId;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }
