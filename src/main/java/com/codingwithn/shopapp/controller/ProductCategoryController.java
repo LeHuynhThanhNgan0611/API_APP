@@ -2,17 +2,20 @@ package com.codingwithn.shopapp.controller;
 
 import com.codingwithn.shopapp.models.*;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 @RestController
 public class ProductCategoryController {
+    private List<ProductCategory> productCategories;
     @GetMapping("/productCategories")
     public List<ProductCategory> getAllProductCategory() {
-        List<ProductCategory> productCategories = new ArrayList<>();
+        this.productCategories = new ArrayList<>();
         productCategories.add(new ProductCategory("11", "Dụng cụ thể thao", "https://res.cloudinary.com/ddbvpbkql/image/upload/v1713259334/category/thethao.png", "1", false,
                 List.of(
                         new Product(
@@ -1267,5 +1270,29 @@ public class ProductCategoryController {
                 )
         ));
         return  productCategories;
+    }
+
+    @GetMapping("/productCategory/{id}/products")
+    public List<Product> getProductsByCategoryId(@PathVariable String id) {
+        // Find product category by ID
+        ProductCategory productCategory = findProductCategoryById(id);
+
+        if (productCategory != null) {
+            // Return products of the found category
+            return productCategory.getProducts();
+        } else {
+            // Return an empty list if category not found
+            return Collections.emptyList();
+        }
+    }
+
+    // Method to find a product category by ID
+    private ProductCategory findProductCategoryById(String id) {
+        for (ProductCategory productCategory : productCategories) {
+            if (productCategory.getCategoryId().equals(id)) {
+                return productCategory;
+            }
+        }
+        return null; // Return null if category not found
     }
 }
