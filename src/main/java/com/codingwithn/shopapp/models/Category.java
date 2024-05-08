@@ -7,17 +7,19 @@ public class Category {
     private String parentId;
     private boolean featured;
     private List<Category> children;
+    private List<Product> products;
 
     public Category() {
         // Constructor mặc định (cần cho Spring Boot khi sử dụng các model trong controller)
     }
 
-    public Category(String id, String name, String image, String parentId, boolean featured) {
+    public Category(String id, String name, String image, String parentId, boolean featured, List<Product> products) {
         this.id = id;
         this.name = name;
         this.image = image;
         this.parentId = parentId;
         this.featured = featured;
+        this.products = products;
     }
 
     // Getter và setter cho các thuộc tính
@@ -67,5 +69,13 @@ public class Category {
 
     public void setChildren(List<Category> children) {
         this.children = children;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 }

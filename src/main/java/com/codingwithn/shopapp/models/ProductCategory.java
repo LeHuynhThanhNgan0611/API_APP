@@ -81,4 +81,8 @@ public class ProductCategory {
                 ", products=" + products +
                 '}';
     }
+
+    public String getId() {
+        return categoryId;
+    }
 }
