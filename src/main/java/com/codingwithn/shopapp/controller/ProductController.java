@@ -5,6 +5,7 @@ import com.codingwithn.shopapp.models.Product;
 import com.codingwithn.shopapp.models.ProductAttribute;
 import com.codingwithn.shopapp.models.ProductVariation;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -2444,5 +2445,13 @@ public class ProductController {
                 new ArrayList<>()
         ));
         return products;
+    }
+
+    @GetMapping("/products/{categoryId}")
+    public List<Product> getProductsByCategory(@PathVariable String categoryId) {
+        // Sử dụng stream để lọc sản phẩm theo categoryId
+        return products.stream()
+                .filter(product -> product.getCategoryId().equals(categoryId))
+                .collect(Collectors.toList());
     }
 }
